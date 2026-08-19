@@ -37,14 +37,6 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     url: "https://taller-cesarfernandez.vercel.app",
     siteName: "César Fernández — Multiservicios y Repuestos",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1983,
-        height: 793,
-        alt: "César Fernández — Taller de Mecánica de Motos en Tarapoto",
-      },
-    ],
     locale: "es_PE",
     type: "website",
   },
@@ -52,7 +44,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "César Fernández — Taller de Motos en Tarapoto | 20 Años de Experiencia",
     description: SITE_DESCRIPTION,
-    images: ["/og-image.png"],
   },
 };
 
