@@ -50,6 +50,9 @@ export default function Precios() {
           <h2 className="font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
             Precios
           </h2>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-zinc-500">
+            Precios para motos de todo cilindraje
+          </p>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-zinc-400 md:text-base">
             Precios de mano de obra. Repuestos aparte. Varían según cilindraje y marca — consulta por tu
             modelo.

@@ -11,10 +11,10 @@ export const MARCO_PHONE_DISPLAY = "+51 000 000 000";
 export const MARCO_PHONE_INTL = "51000000000";
 
 export const LOCATION = {
-  city: "Tingo María",
-  region: "Huánuco",
+  city: "Tarapoto",
+  region: "San Martín",
   country: "Perú",
-  address: "Tingo María, Huánuco, Perú",
+  address: "Tarapoto, San Martín, Perú",
   lat: -6.4958487,
   lng: -76.3497356,
 };

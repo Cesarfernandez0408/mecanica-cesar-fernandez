@@ -7,24 +7,24 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden bg-[#0a0a0a]">
       <Image
-        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39"
-        alt="Moto lista para mantenimiento en el taller"
+        src="/portada.png"
+        alt="Taller César Fernández — mecánica de motos en Tarapoto"
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-[#0a0a0a]/65" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/40" />
+      <div className="absolute inset-0 bg-[#0a0a0a]/45" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] from-15% via-[#0a0a0a]/85 via-55% to-transparent" />
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 text-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pb-16 pt-24 text-center md:pb-20">
         <motion.span
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-red-600 bg-red-600/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-red-500 md:text-sm"
+          className="mb-5 inline-flex items-center gap-2 rounded-full border border-red-600 bg-red-600/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-red-500 md:text-sm"
         >
           <Wrench className="h-4 w-4" aria-hidden />
           Diagnóstico virtual gratis
@@ -34,27 +34,26 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-heading text-6xl uppercase leading-[0.95] tracking-tight text-white md:text-8xl"
+          className="font-heading text-3xl uppercase leading-[0.95] tracking-tight text-white sm:text-4xl md:text-6xl"
         >
-          Tu moto en las
-          <br />
-          <span className="text-red-600">mejores manos</span>
+          Tu moto en las <span className="text-red-600">mejores manos</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-lg text-zinc-300 md:text-xl"
+          className="mt-4 max-w-2xl text-base text-zinc-300 md:text-lg"
         >
-          Multiservicios y repuestos en Tingo María. Mecánica profesional para tu moto lineal o de inyección.
+          Taller especializado en motos lineales y de inyección en Tarapoto. Mantenimiento, reparación y
+          repuestos originales.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 flex flex-col gap-4 sm:flex-row"
+          className="mt-8 flex flex-col gap-4 sm:flex-row"
         >
           <WhatsAppButton
             message="Hola, quiero contactar por un servicio para mi moto."

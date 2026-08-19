@@ -16,33 +16,33 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cesarfernandez-motos.pe"),
-  title: "César Fernández — Mecánica de Motos en Tingo María | Multiservicios y Repuestos",
+  title: "César Fernández — Taller de Mecánica de Motos en Tarapoto | Multiservicios y Repuestos",
   description:
-    "Taller de mecánica de motos en Tingo María. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos. Recogemos tu moto gratis. WhatsApp +51 928 066 573.",
+    "Taller especializado en mecánica de motos en Tarapoto, San Martín. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos para motos lineales y de inyección. Recogemos tu moto gratis. WhatsApp +51 928 066 573.",
   keywords: [
-    "mecánica motos Tingo María",
-    "taller motos Huánuco",
-    "repuestos moto Perú",
-    "mecánico de motos Tingo María",
+    "mecánica de motos Tarapoto",
+    "taller de motos San Martín",
+    "repuestos moto Tarapoto",
+    "mecánico motos selva Perú",
+    "taller de motos Tarapoto",
     "mantenimiento de motos",
     "reparación de motor moto",
-    "taller de motos Huánuco",
-    "repuestos motos Tingo María",
-    "lavadero de motos Tingo María",
+    "repuestos moto Perú",
+    "lavadero de motos Tarapoto",
   ],
   authors: [{ name: "César Fernández" }],
   openGraph: {
-    title: "César Fernández — Mecánica de Motos en Tingo María",
+    title: "César Fernández — Taller de Mecánica de Motos en Tarapoto",
     description:
-      "Taller de mecánica de motos en Tingo María. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos. Recogemos tu moto gratis.",
+      "Taller especializado en mecánica de motos en Tarapoto, San Martín. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos para motos lineales y de inyección. Recogemos tu moto gratis.",
     url: "/",
     siteName: "César Fernández — Multiservicios y Repuestos",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "César Fernández — Multiservicios y Repuestos",
+        url: "/og-image.png",
+        width: 1983,
+        height: 793,
+        alt: "César Fernández — Taller de Mecánica de Motos en Tarapoto",
       },
     ],
     locale: "es_PE",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "César Fernández — Mecánica de Motos en Tingo María",
+    title: "César Fernández — Taller de Mecánica de Motos en Tarapoto",
     description:
-      "Taller de mecánica de motos en Tingo María. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos. Recogemos tu moto gratis.",
-    images: ["/og-image.jpg"],
+      "Taller especializado en mecánica de motos en Tarapoto, San Martín. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos para motos lineales y de inyección. Recogemos tu moto gratis.",
+    images: ["/og-image.png"],
   },
 };
 

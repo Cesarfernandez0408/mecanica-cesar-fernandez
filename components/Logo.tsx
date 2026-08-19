@@ -1,53 +1,31 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BUSINESS_FULL_NAME, BUSINESS_NAME, BUSINESS_TAGLINE } from "@/lib/site-config";
+import { BUSINESS_FULL_NAME } from "@/lib/site-config";
 
 interface LogoProps {
   className?: string;
-  showText?: boolean;
+  variant?: "full" | "compact";
+  imageClassName?: string;
 }
 
-export default function Logo({ className = "", showText = true }: LogoProps) {
-  const [imageFailed, setImageFailed] = useState(false);
+const DEFAULT_IMAGE_CLASSES: Record<NonNullable<LogoProps["variant"]>, string> = {
+  full: "h-12 w-auto object-contain md:h-14",
+  compact: "h-10 w-10 object-contain md:h-11 md:w-11",
+};
+
+export default function Logo({ className = "", variant = "full", imageClassName }: LogoProps) {
+  const isCompact = variant === "compact";
 
   return (
-    <Link
-      href="#"
-      className={`flex items-center gap-3 ${className}`}
-      aria-label={BUSINESS_FULL_NAME}
-    >
-      {!imageFailed ? (
-        // Reemplaza /public/logo.png con el logo real del taller cuando esté disponible.
-        <Image
-          src="/logo.png"
-          alt={BUSINESS_FULL_NAME}
-          width={44}
-          height={44}
-          priority
-          className="h-10 w-10 shrink-0 rounded-full object-cover md:h-11 md:w-11"
-          onError={() => setImageFailed(true)}
-        />
-      ) : (
-        <span
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white bg-red-600 font-heading text-base font-semibold tracking-wide text-white md:h-11 md:w-11 md:text-lg"
-          aria-hidden
-        >
-          CF
-        </span>
-      )}
-      {showText && (
-        <span className="hidden flex-col leading-none sm:flex">
-          <span className="font-heading text-lg uppercase tracking-wide text-white md:text-xl">
-            {BUSINESS_NAME}
-          </span>
-          <span className="text-[10px] uppercase tracking-widest text-zinc-400 md:text-xs">
-            {BUSINESS_TAGLINE}
-          </span>
-        </span>
-      )}
+    <Link href="#" className={`flex items-center ${className}`} aria-label={BUSINESS_FULL_NAME}>
+      <Image
+        src={isCompact ? "/logo.png" : "/logo-completo.png"}
+        alt={BUSINESS_FULL_NAME}
+        width={isCompact ? 44 : 200}
+        height={isCompact ? 44 : 200}
+        priority
+        className={imageClassName ?? DEFAULT_IMAGE_CLASSES[variant]}
+      />
     </Link>
   );
 }

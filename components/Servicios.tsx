@@ -75,7 +75,7 @@ export default function Servicios() {
           className="mb-14 text-center"
         >
           <h2 className="font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
-            Servicios
+            Servicios para tu moto
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
             Todo lo que tu moto necesita, en un solo taller.

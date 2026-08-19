@@ -2,7 +2,6 @@ import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import Logo from "@/components/Logo";
 import {
   BUSINESS_FULL_NAME,
-  BUSINESS_TAGLINE,
   CESAR_PHONE_DISPLAY,
   CESAR_PHONE_INTL,
   HOURS,
@@ -20,8 +19,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <Logo />
-            <p className="mt-4 max-w-xs text-sm text-zinc-500">{BUSINESS_TAGLINE}</p>
+            <Logo imageClassName="h-20 w-auto object-contain" />
           </div>
 
           <div>
