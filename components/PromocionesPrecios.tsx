@@ -65,7 +65,7 @@ const BLOQUES: Bloque[] = [
 
 export default function PromocionesPrecios() {
   return (
-    <section id="servicios" className="overflow-x-hidden bg-black py-16 md:py-20">
+    <section className="overflow-x-hidden bg-black py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
           <motion.div
@@ -74,7 +74,7 @@ export default function PromocionesPrecios() {
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
           >
-            <h2 className="font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
+            <h2 id="promociones" className="scroll-mt-24 font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
               Promociones
             </h2>
 
@@ -109,7 +109,7 @@ export default function PromocionesPrecios() {
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
           >
-            <h2 className="font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
+            <h2 id="precios" className="scroll-mt-24 font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
               Precios
             </h2>
             <p className="mt-1 text-xs text-zinc-500 sm:text-sm">Mano de obra. Repuestos aparte.</p>

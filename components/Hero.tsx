@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden bg-[#0a0a0a]">
+    <section id="top" className="relative flex min-h-screen flex-col justify-end overflow-hidden bg-[#0a0a0a]">
       <Image
         src="/portada.png"
         alt="Taller César Fernández — mecánica de motos en Tarapoto"

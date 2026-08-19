@@ -6,9 +6,9 @@ export const BUSINESS_TAGLINE = "Multiservicios y Repuestos";
 export const CESAR_PHONE_DISPLAY = "+51 928 066 573";
 export const CESAR_PHONE_INTL = "51928066573";
 
-// Marco — segundo contacto. Placeholder hasta que el cliente confirme el número real.
-export const MARCO_PHONE_DISPLAY = "+51 000 000 000";
-export const MARCO_PHONE_INTL = "51000000000";
+// Marco — segundo contacto
+export const MARCO_PHONE_DISPLAY = "+51 938 650 628";
+export const MARCO_PHONE_INTL = "51938650628";
 
 export const LOCATION = {
   city: "Tarapoto",
@@ -34,7 +34,9 @@ export const HOURS = {
 
 export const NAV_LINKS = [
   { href: "#nosotros", label: "Nosotros" },
-  { href: "#nosotros", label: "Servicios" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#promociones", label: "Promociones" },
+  { href: "#precios", label: "Precios" },
   { href: "#galeria", label: "Galería" },
   { href: "#contacto", label: "Contacto" },
 ];

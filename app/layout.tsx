@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Oswald, Inter } from "next/font/google";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import { CESAR_PHONE_INTL, LOCATION } from "@/lib/site-config";
+import { MenuProvider } from "@/lib/menu-context";
+import { CESAR_PHONE_INTL, LOCATION, MARCO_PHONE_INTL } from "@/lib/site-config";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -19,7 +20,7 @@ const SITE_DESCRIPTION =
   "Taller de mecánica de motos en Tarapoto con más de 20 años de experiencia. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos originales. Recogemos tu moto gratis. WhatsApp +51 928 066 573.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cesarfernandez-motos.pe"),
+  metadataBase: new URL("https://taller-cesarfernandez.vercel.app"),
   title: "César Fernández — Taller de Motos en Tarapoto | 20 Años de Experiencia",
   description: SITE_DESCRIPTION,
   keywords: [
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "César Fernández — Taller de Motos en Tarapoto | 20 Años de Experiencia",
     description: SITE_DESCRIPTION,
-    url: "/",
+    url: "https://taller-cesarfernandez.vercel.app",
     siteName: "César Fernández — Multiservicios y Repuestos",
     images: [
       {
@@ -71,7 +72,7 @@ const LOCAL_BUSINESS_JSON_LD = {
     latitude: LOCATION.lat,
     longitude: LOCATION.lng,
   },
-  telephone: `+${CESAR_PHONE_INTL}`,
+  telephone: [`+${CESAR_PHONE_INTL}`, `+${MARCO_PHONE_INTL}`],
   openingHours: "Mo-Sa 08:00-19:00",
   priceRange: "S/30 - S/140",
 };
@@ -99,8 +100,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSON_LD) }}
         />
-        {children}
-        <FloatingWhatsApp />
+        <MenuProvider>
+          {children}
+          <FloatingWhatsApp />
+        </MenuProvider>
       </body>
     </html>
   );

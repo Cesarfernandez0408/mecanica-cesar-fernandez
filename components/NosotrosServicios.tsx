@@ -98,7 +98,7 @@ export default function NosotrosServicios() {
             variants={fadeUp}
             className="md:col-span-3"
           >
-            <h3 className="font-heading text-2xl uppercase tracking-tight text-red-600 sm:text-3xl">
+            <h3 id="servicios" className="scroll-mt-24 font-heading text-2xl uppercase tracking-tight text-red-600 sm:text-3xl">
               Nuestros servicios
             </h3>
 

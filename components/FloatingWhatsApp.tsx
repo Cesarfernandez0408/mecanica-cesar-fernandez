@@ -1,9 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
+import { useMenu } from "@/lib/menu-context";
 import { buildWhatsAppUrl } from "@/lib/site-config";
 
 export default function FloatingWhatsApp() {
-  const href = buildWhatsAppUrl("Hola, quiero más información sobre sus servicios.");
+  const { menuOpen } = useMenu();
+  const href = buildWhatsAppUrl(
+    "Hola César, vi tu página web y quiero consultar sobre un servicio para mi moto."
+  );
+
+  if (menuOpen) return null;
 
   return (
     <a
