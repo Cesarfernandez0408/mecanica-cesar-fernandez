@@ -9,7 +9,7 @@ interface LogoProps {
 }
 
 const DEFAULT_IMAGE_CLASSES: Record<NonNullable<LogoProps["variant"]>, string> = {
-  full: "h-12 w-auto object-contain md:h-14",
+  full: "max-h-10 w-auto object-contain md:max-h-12",
   compact: "h-10 w-10 object-contain md:h-11 md:w-11",
 };
 

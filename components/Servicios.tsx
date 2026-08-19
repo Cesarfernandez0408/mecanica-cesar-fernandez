@@ -65,8 +65,8 @@ const SERVICIOS: Servicio[] = [
 
 export default function Servicios() {
   return (
-    <section id="servicios" className="bg-[#0a0a0a] py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <section id="servicios" className="overflow-x-hidden bg-[#0a0a0a] py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -87,22 +87,22 @@ export default function Servicios() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUpContainer}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4"
         >
           {SERVICIOS.map((servicio) => (
             <motion.div
               key={servicio.title}
               variants={fadeUp}
-              className="group rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-colors hover:border-red-600"
+              className="group rounded-lg border border-zinc-800 bg-zinc-900 p-4 transition-colors hover:border-red-600 sm:p-6"
             >
               <servicio.icon
-                className="h-9 w-9 text-red-600 transition-transform group-hover:scale-110"
+                className="h-7 w-7 text-red-600 transition-transform group-hover:scale-110 sm:h-9 sm:w-9"
                 aria-hidden
               />
-              <h3 className="mt-4 font-heading text-xl uppercase tracking-wide text-white">
+              <h3 className="mt-4 font-heading text-base uppercase tracking-wide text-white sm:text-xl">
                 {servicio.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+              <p className="mt-2 text-xs leading-relaxed text-zinc-400 sm:text-sm">
                 {servicio.description}
               </p>
             </motion.div>

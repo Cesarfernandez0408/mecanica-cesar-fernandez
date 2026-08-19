@@ -37,8 +37,8 @@ const PROMOCIONES: Promocion[] = [
 
 export default function Promociones() {
   return (
-    <section id="promociones" className="bg-red-600 py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <section id="promociones" className="overflow-x-hidden bg-red-600 py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -59,7 +59,7 @@ export default function Promociones() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUpContainer}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2"
         >
           {PROMOCIONES.map((promo) => (
             <motion.div

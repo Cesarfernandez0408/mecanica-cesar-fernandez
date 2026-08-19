@@ -19,8 +19,8 @@ const CONTACTOS = [
 
 export default function Contacto() {
   return (
-    <section id="contacto" className="bg-red-600 py-24">
-      <div className="mx-auto max-w-5xl px-4 text-center md:px-8">
+    <section id="contacto" className="overflow-x-hidden bg-red-600 py-24">
+      <div className="mx-auto max-w-5xl px-4 text-center md:px-8 lg:px-16">
         <motion.h2
           initial="hidden"
           whileInView="visible"

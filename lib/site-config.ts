@@ -32,6 +32,7 @@ export const HOURS = {
 };
 
 export const NAV_LINKS = [
+  { href: "#sobre-nosotros", label: "Nosotros" },
   { href: "#servicios", label: "Servicios" },
   { href: "#promociones", label: "Promociones" },
   { href: "#precios", label: "Precios" },

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import SobreNosotros from "@/components/SobreNosotros";
 import Servicios from "@/components/Servicios";
 import Promociones from "@/components/Promociones";
 import Precios from "@/components/Precios";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <SobreNosotros />
         <Servicios />
         <Promociones />
         <Precios />

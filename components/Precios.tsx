@@ -38,8 +38,8 @@ const COLUMNAS: Columna[] = [
 
 export default function Precios() {
   return (
-    <section id="precios" className="bg-[#0a0a0a] py-24">
-      <div className="mx-auto max-w-6xl px-4 md:px-8">
+    <section id="precios" className="overflow-x-hidden bg-[#0a0a0a] py-24">
+      <div className="mx-auto max-w-6xl px-4 md:px-8 lg:px-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -77,24 +77,27 @@ export default function Precios() {
               </h3>
               <p className="text-sm uppercase tracking-widest text-red-500">{columna.subtitle}</p>
 
-              <ul className="mt-6 flex flex-col divide-y divide-zinc-800">
+              <ul className="mt-6 flex flex-col gap-4 divide-y divide-zinc-800 md:gap-0">
                 {columna.items.map((item) => (
                   <li
                     key={item.label}
-                    className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between"
+                    className="flex flex-col gap-3 pb-4 first:pt-0 md:flex-row md:items-center md:justify-between md:gap-4 md:py-4 md:pb-4"
                   >
-                    <div className="flex flex-1 items-baseline justify-between gap-4 sm:justify-start">
-                      <span className="text-zinc-300">{item.label}</span>
-                      <span className="font-heading text-xl text-white">{item.price}</span>
+                    <span className="text-sm text-zinc-300 md:flex-1 md:text-base">{item.label}</span>
+
+                    <div className="flex items-center justify-between gap-3 md:w-auto md:justify-end md:gap-6">
+                      <span className="whitespace-nowrap font-heading text-2xl text-white md:w-20 md:text-center md:text-3xl">
+                        {item.price}
+                      </span>
+                      <WhatsAppButton
+                        message={`Hola, vengo de la sección de precios y quiero cotizar: ${item.label} (${item.price}).`}
+                        variant="outline"
+                        className="shrink-0 whitespace-nowrap rounded-md px-3 py-2 text-xs md:px-4 md:text-sm"
+                      >
+                        <span className="md:hidden">Consultar</span>
+                        <span className="hidden md:inline">Consultar por WhatsApp</span>
+                      </WhatsAppButton>
                     </div>
-                    <WhatsAppButton
-                      message={`Hola, vengo de la sección de precios y quiero cotizar: ${item.label} (${item.price}).`}
-                      variant="outline"
-                      showIcon={false}
-                      className="shrink-0 rounded-md px-4 py-2 text-xs"
-                    >
-                      Consultar por WhatsApp
-                    </WhatsAppButton>
                   </li>
                 ))}
               </ul>

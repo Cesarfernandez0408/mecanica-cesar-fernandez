@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Oswald, Inter } from "next/font/google";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { CESAR_PHONE_INTL, LOCATION } from "@/lib/site-config";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -14,27 +15,25 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const SITE_DESCRIPTION =
+  "Taller de mecánica de motos en Tarapoto con más de 20 años de experiencia. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos originales. Recogemos tu moto gratis. WhatsApp +51 928 066 573.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://cesarfernandez-motos.pe"),
-  title: "César Fernández — Taller de Mecánica de Motos en Tarapoto | Multiservicios y Repuestos",
-  description:
-    "Taller especializado en mecánica de motos en Tarapoto, San Martín. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos para motos lineales y de inyección. Recogemos tu moto gratis. WhatsApp +51 928 066 573.",
+  title: "César Fernández — Taller de Motos en Tarapoto | 20 Años de Experiencia",
+  description: SITE_DESCRIPTION,
   keywords: [
     "mecánica de motos Tarapoto",
     "taller de motos San Martín",
-    "repuestos moto Tarapoto",
-    "mecánico motos selva Perú",
-    "taller de motos Tarapoto",
-    "mantenimiento de motos",
-    "reparación de motor moto",
+    "reparación motor moto Tarapoto",
     "repuestos moto Perú",
-    "lavadero de motos Tarapoto",
+    "mecánico motos selva Perú",
+    "César Fernández mecánico",
   ],
   authors: [{ name: "César Fernández" }],
   openGraph: {
-    title: "César Fernández — Taller de Mecánica de Motos en Tarapoto",
-    description:
-      "Taller especializado en mecánica de motos en Tarapoto, San Martín. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos para motos lineales y de inyección. Recogemos tu moto gratis.",
+    title: "César Fernández — Taller de Motos en Tarapoto | 20 Años de Experiencia",
+    description: SITE_DESCRIPTION,
     url: "/",
     siteName: "César Fernández — Multiservicios y Repuestos",
     images: [
@@ -50,11 +49,31 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "César Fernández — Taller de Mecánica de Motos en Tarapoto",
-    description:
-      "Taller especializado en mecánica de motos en Tarapoto, San Martín. Mantenimiento, reparación de motor, sistema eléctrico, pintura y repuestos para motos lineales y de inyección. Recogemos tu moto gratis.",
+    title: "César Fernández — Taller de Motos en Tarapoto | 20 Años de Experiencia",
+    description: SITE_DESCRIPTION,
     images: ["/og-image.png"],
   },
+};
+
+const LOCAL_BUSINESS_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  name: "César Fernández — Multiservicios y Repuestos",
+  description: SITE_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: LOCATION.city,
+    addressRegion: LOCATION.region,
+    addressCountry: "PE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: LOCATION.lat,
+    longitude: LOCATION.lng,
+  },
+  telephone: `+${CESAR_PHONE_INTL}`,
+  openingHours: "Mo-Sa 08:00-19:00",
+  priceRange: "S/30 - S/140",
 };
 
 export const viewport: Viewport = {
@@ -75,7 +94,11 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${oswald.variable} ${inter.variable}`}
     >
-      <body className="bg-[#0a0a0a] font-body text-white antialiased">
+      <body className="overflow-x-hidden bg-[#0a0a0a] font-body text-white antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSON_LD) }}
+        />
         {children}
         <FloatingWhatsApp />
       </body>

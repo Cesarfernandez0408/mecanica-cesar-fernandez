@@ -35,7 +35,7 @@ export default function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}
-      className={`inline-flex items-center justify-center gap-2 font-semibold uppercase tracking-wide transition-colors ${VARIANT_CLASSES[variant]} ${className}`}
+      className={`inline-flex min-h-11 items-center justify-center gap-2 font-semibold uppercase tracking-wide transition-colors ${VARIANT_CLASSES[variant]} ${className}`}
     >
       {showIcon && <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />}
       {children ?? "WhatsApp"}

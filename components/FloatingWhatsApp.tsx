@@ -11,7 +11,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escribir por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 shadow-lg shadow-black/50 transition-transform hover:scale-105"
+      className="fixed bottom-4 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 shadow-lg shadow-black/50 transition-transform hover:scale-105 sm:bottom-6 sm:right-6"
     >
       <span className="absolute inset-0 rounded-full bg-red-600 animate-wa-pulse" aria-hidden />
       <Image

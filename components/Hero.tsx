@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#0a0a0a]/45" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] from-15% via-[#0a0a0a]/85 via-55% to-transparent" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pb-16 pt-24 text-center md:pb-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pb-16 pt-24 text-center md:px-8 md:pb-20 lg:px-16">
         <motion.span
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export default function Hero() {
           />
           <a
             href="#servicios"
-            className="inline-flex items-center justify-center rounded-md border-2 border-white px-8 py-4 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border-2 border-white px-8 py-4 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black"
           >
             Ver servicios
           </a>

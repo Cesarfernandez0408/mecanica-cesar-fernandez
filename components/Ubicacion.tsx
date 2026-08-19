@@ -14,8 +14,8 @@ import {
 
 export default function Ubicacion() {
   return (
-    <section id="ubicacion" className="bg-[#0a0a0a] py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <section id="ubicacion" className="overflow-x-hidden bg-[#0a0a0a] py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -72,14 +72,14 @@ export default function Ubicacion() {
                 href={GOOGLE_MAPS_DIRECTIONS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-700"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-700"
               >
                 <Navigation className="h-4 w-4" aria-hidden />
                 Cómo llegar
               </a>
               <a
                 href={`tel:+${CESAR_PHONE_INTL}`}
-                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border-2 border-white px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black"
               >
                 <Phone className="h-4 w-4" aria-hidden />
                 Llamar ahora

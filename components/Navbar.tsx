@@ -31,7 +31,7 @@ export default function Navbar() {
         scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-[#0a0a0a]/90 shadow-lg shadow-black/30" : ""
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8 lg:px-16">
         <Logo />
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -57,7 +57,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen(true)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-white lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md text-white lg:hidden"
           aria-label="Abrir menú"
           aria-expanded={menuOpen}
         >
@@ -79,7 +79,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMenuOpen(false)}
-                className="flex h-10 w-10 items-center justify-center rounded-md text-white"
+                className="flex h-11 w-11 items-center justify-center rounded-md text-white"
                 aria-label="Cerrar menú"
               >
                 <X className="h-7 w-7" aria-hidden />
