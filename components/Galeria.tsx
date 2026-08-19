@@ -19,21 +19,18 @@ const fotos: Foto[] = [
 
 export default function Galeria() {
   return (
-    <section id="galeria" className="overflow-x-hidden bg-[#0a0a0a] py-24">
+    <section id="galeria" className="overflow-x-hidden bg-[#0a0a0a] py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
-          className="mb-14 text-center"
+          className="mb-8 text-center"
         >
           <h2 className="font-heading text-4xl uppercase tracking-tight text-red-600 md:text-5xl">
-            Galería
+            Nuestros trabajos
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
-            Un vistazo a nuestro trabajo en el taller.
-          </p>
         </motion.div>
 
         <motion.div
@@ -41,15 +38,13 @@ export default function Galeria() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUpContainer}
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {fotos.map((foto, index) => (
             <motion.div
               key={foto.src}
               variants={fadeUp}
-              className={`group relative aspect-[4/3] overflow-hidden rounded-lg border-2 border-transparent transition-colors hover:border-red-600 lg:col-span-2 ${
-                index === 3 ? "lg:col-start-2" : ""
-              }`}
+              className="group relative aspect-[4/3] max-h-80 w-full overflow-hidden rounded-lg border-2 border-transparent transition-colors hover:border-red-600"
             >
               <Image
                 src={foto.src}
@@ -63,8 +58,8 @@ export default function Galeria() {
           ))}
         </motion.div>
 
-        <p className="mt-10 text-center text-sm text-zinc-400">
-          Más trabajos próximamente. ¿Quieres que tu moto aparezca aquí? Trae tu moto al taller.
+        <p className="mt-8 text-center text-sm text-zinc-400">
+          Más trabajos próximamente. ¿Quieres que tu moto aparezca aquí?
         </p>
       </div>
     </section>

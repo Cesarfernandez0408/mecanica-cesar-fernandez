@@ -7,7 +7,7 @@ interface WhatsAppButtonProps {
   phone?: string;
   children?: ReactNode;
   className?: string;
-  variant?: "primary" | "outline" | "ghost";
+  variant?: "primary" | "outline" | "outline-red" | "ghost";
   showIcon?: boolean;
   onClick?: () => void;
 }
@@ -15,6 +15,7 @@ interface WhatsAppButtonProps {
 const VARIANT_CLASSES: Record<NonNullable<WhatsAppButtonProps["variant"]>, string> = {
   primary: "bg-red-600 text-white hover:bg-red-700",
   outline: "border-2 border-white text-white hover:bg-white hover:text-black",
+  "outline-red": "border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white",
   ghost: "text-white hover:text-red-500",
 };
 

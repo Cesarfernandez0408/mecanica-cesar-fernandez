@@ -36,7 +36,7 @@ export default function Navbar() {
 
         <ul className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
-            <li key={link.href}>
+            <li key={link.label}>
               <a
                 href={link.href}
                 className="text-sm font-medium uppercase tracking-wide text-zinc-300 transition-colors hover:text-red-500"
@@ -89,7 +89,7 @@ export default function Navbar() {
             <ul className="flex flex-1 flex-col items-center justify-center gap-8">
               {NAV_LINKS.map((link, i) => (
                 <motion.li
-                  key={link.href}
+                  key={link.label}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.05 * i, duration: 0.3 }}

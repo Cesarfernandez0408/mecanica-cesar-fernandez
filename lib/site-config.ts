@@ -29,15 +29,13 @@ export const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=
 export const HOURS = {
   weekday: "Lunes a sábado: 8:00 a.m. – 7:00 p.m. (horario corrido)",
   sunday: "Domingos: solo con cita previa por WhatsApp",
+  compact: "Lun-Sáb 8:00 a.m. - 7:00 p.m. | Dom con cita previa",
 };
 
 export const NAV_LINKS = [
-  { href: "#sobre-nosotros", label: "Nosotros" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#promociones", label: "Promociones" },
-  { href: "#precios", label: "Precios" },
+  { href: "#nosotros", label: "Nosotros" },
+  { href: "#nosotros", label: "Servicios" },
   { href: "#galeria", label: "Galería" },
-  { href: "#ubicacion", label: "Ubicación" },
   { href: "#contacto", label: "Contacto" },
 ];
 
